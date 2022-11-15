@@ -1,5 +1,5 @@
-export function getWeatherData() {
-    fetch('https://api.openweathermap.org/data/2.5/weather?lat=36.16&lon=86.78&appid=18293e2178d3146f5aed1d9ca6c8609f',
+export function getGeocodingData() {
+    fetch('http://api.openweathermap.org/geo/1.0/direct?q=Nashville&appid=18293e2178d3146f5aed1d9ca6c8609f',
     {mode: 'cors'})
     .then(function(response) {
       return response.json();
