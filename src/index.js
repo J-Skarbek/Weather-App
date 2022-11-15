@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import './style.css';
 import { createHomePage } from './homePage.js';
+import { getWeatherData } from './getData.js';
 // import TestImg from './images/test-image.png';
 // import printMe from './print.js';
 
@@ -22,3 +23,4 @@ import { createHomePage } from './homePage.js';
 // }
 
 document.body.appendChild(createHomePage());
+getWeatherData();
