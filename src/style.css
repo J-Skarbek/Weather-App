@@ -43,6 +43,15 @@ table {
 }
 
 .hello {
-  color: red;
-  background: url('./images/test-image.png');
+    color: red;
+    /* background: url('./images/test-image.png'); */
+}
+
+.main-content {
+    background-color: aqua;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
