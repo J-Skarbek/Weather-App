@@ -5,6 +5,11 @@ export function getGeocodingData() {
       return response.json();
     })
     .then(function(response) {
+      console.log(`latitude = ${response[0].lat} and longitude is = ${response[0].lon}`)
       console.log(response);
     })
+}
+
+function getWeatherData() {
+  fetch('')
 }
