@@ -2,6 +2,7 @@ import _ from 'lodash';
 import './style.css';
 import { createHomePage } from './homePage.js';
 import { getWeatherData } from './getData.js';
+import { getFiveDayData } from './fiveDayForcast.js';
 // import TestImg from './images/test-image.png';
 // import printMe from './print.js';
 
@@ -24,3 +25,4 @@ import { getWeatherData } from './getData.js';
 
 document.body.appendChild(createHomePage());
 getWeatherData();
+getFiveDayData();
