@@ -4,19 +4,12 @@ export function getGeocodingData() {
     fetch(`http://api.openweathermap.org/geo/1.0/direct?q=Nashville&appid=${dataKey}`,
     {mode: 'cors'})
     .then(function(response) {
+      console.log(response);
       return response.json();
     })
     .then(function(response) {
       console.log(`latitude = ${response[0].lat} and longitude is = ${response[0].lon}`)
-      // let latitude = response[0].lat;
-      // let longitude = response[0].lon;
       console.log(response);
-      // return {
-      //   latitude,
-      //   longitude
-      // }
-    })
-    .then(function(response) {
       fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${response[0].lat}&lon=${response[0].lon}&appid=${dataKey}`,
       {mode: 'cors'})
       .then(function(response) {
@@ -28,6 +21,3 @@ export function getGeocodingData() {
     })
 }
 
-// function getWeatherData() {
-//   fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${dataKey}`)
-// }
