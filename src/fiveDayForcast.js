@@ -15,21 +15,26 @@ export function getFiveDayData() {
       return response.json();
     })
     .then(function(response) {
-      console.log(response.list.length)
-      console.log(response.list[0].main.temp)
-      console.log(response.list[7].main.temp)
-      console.log(response.list[15].main.temp)
-      console.log(response.list[23].main.temp)
-      console.log(response.list[31].main.temp)
-      console.log(response.list[39].main.temp)
-      function getEveryNth(response, nth) {
-        const result = [];
-        for ( let i = 0; i < response.list; i += nth) {
-            response.list.push(response[i]);
+      // console.log(response.list.length)
+      // console.log(response.list[0].main.temp)
+      // console.log(response.list[7].main.temp)
+      // console.log(response.list[15].main.temp)
+      // console.log(response.list[23].main.temp)
+      // console.log(response.list[31].main.temp)
+      // console.log(response.list[39].main.temp)
+      console.table(response.list);
+      const newArr = [];
+      response.list.forEach(element => {
+        newArr.push(element)
+      });
+      function getEveryNth(newArr, nth) {
+        const results = [];
+        for (let i = 0; i < newArr.length; i += nth) {
+            results.push(newArr[i])
         }
-        return result;
+        return results;
       }
-      console.log(getEveryNth(response.list), 8);
+      console.table(getEveryNth(newArr, 8));
     })
   })
   }
