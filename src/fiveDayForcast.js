@@ -7,8 +7,8 @@ export function getFiveDayData() {
     return response.json();
   })
   .then(function(response) {
-    console.log(`latitude = ${response[0].lat} and longitude is = ${response[0].lon}`);
-    console.log(response);
+    // console.log(`latitude = ${response[0].lat} and longitude is = ${response[0].lon}`);
+    // console.log(response);
     fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${response[0].lat}&lon=${response[0].lon}&appid=${dataKey}&units=imperial`,
     {mode: 'cors'})
     .then(function(response) {
@@ -25,12 +25,12 @@ export function getFiveDayData() {
       console.table(response.list);
       const newArr = [];
       response.list.forEach(element => {
-        newArr.push(element)
+        newArr.push(element);
       });
       function getEveryNth(newArr, nth) {
         const results = [];
         for (let i = 0; i < newArr.length; i += nth) {
-            results.push(newArr[i])
+            results.push(newArr[i]);
         }
         results.forEach(element => {
           console.log(element.main.temp);
