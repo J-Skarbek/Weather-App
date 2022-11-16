@@ -15,7 +15,7 @@ export function getFiveDayData() {
       return response.json();
     })
     .then(function(response) {
-      // console.log(response.list.length)
+      console.log(response.list)
       // console.log(response.list[0].main.temp)
       // console.log(response.list[7].main.temp)
       // console.log(response.list[15].main.temp)
@@ -32,11 +32,12 @@ export function getFiveDayData() {
         for (let i = 0; i < newArr.length; i += nth) {
             results.push(newArr[i])
         }
+        results.forEach(element => {
+          console.log(element.main.temp);
+        });
         return results;
       }
       console.table(getEveryNth(newArr, 8));
     })
   })
-  }
-
-//   `api.openweathermap.org/data/2.5/forecast?lat=${response[0].lat}&lon=${response[0].lon}&appid=${dataKey}`
+}
