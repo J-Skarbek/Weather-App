@@ -55,3 +55,21 @@ table {
     justify-content: center;
     align-items: center;
 }
+
+.forecast {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forecast div {
+    background-color: wheat;
+    padding: 5%;
+    margin: 2% 4%;
+}
+
+div > p {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 5%;
+}

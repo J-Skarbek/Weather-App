@@ -30,7 +30,7 @@ export function getFiveDayData() {
         const createTempDisplay = document.createElement('p');
         getForcastBlock.appendChild(createDayBlock);
         createDayBlock.appendChild(createTempDisplay);
-        createTempDisplay.textContent = `${element.main.temp}`;
+        createTempDisplay.textContent = `${Math.round(element.main.temp)}`;
         return createDayBlock;
       }
       response.list.forEach(element => {
