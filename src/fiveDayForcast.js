@@ -24,6 +24,15 @@ export function getFiveDayData() {
       // console.log(response.list[39].main.temp)
       console.table(response.list);
       const newArr = [];
+      const createForecastDisplay = (element) => {
+        const getForcastBlock = document.querySelector('.forecast');
+        const createDayBlock = document.createElement('div');
+        const createTempDisplay = document.createElement('p');
+        getForcastBlock.appendChild(createDayBlock);
+        createDayBlock.appendChild(createTempDisplay);
+        createTempDisplay.textContent = `${element.main.temp}`;
+        return createDayBlock;
+      }
       response.list.forEach(element => {
         newArr.push(element);
       });
@@ -34,6 +43,7 @@ export function getFiveDayData() {
         }
         results.forEach(element => {
           console.log(element.main.temp);
+          createForecastDisplay(element);
         });
         return results;
       }
