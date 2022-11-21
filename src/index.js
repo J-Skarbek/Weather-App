@@ -4,6 +4,7 @@ import { createHomePage } from './homePage.js';
 import { getWeatherData } from './getData.js';
 import { getFiveDayData } from './fiveDayForcast.js';
 import { createForcastDisplay } from './fiveDayDisplay.js';
+
 // import TestImg from './images/test-image.png';
 // import printMe from './print.js';
 
@@ -28,3 +29,4 @@ document.body.appendChild(createHomePage());
 getWeatherData();
 getFiveDayData();
 createForcastDisplay();
+// printValues();

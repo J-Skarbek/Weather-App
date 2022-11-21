@@ -51,3 +51,42 @@ export function getFiveDayData() {
     })
   })
 }
+
+
+
+// import { dataKey } from './key.js';
+
+// async function printValues(response) {
+//   const values = await response;
+//   console.log(`Here is the returned, out of scope values: ${values.main}!`);
+// }
+
+// export function getFiveDayData() {
+//   fetch(`http://api.openweathermap.org/geo/1.0/direct?q=Nashville&appid=${dataKey}`,
+//   {mode: 'cors'})
+//   .then(function(response) {
+//     return response.json();
+//   })
+//   .then(function(response) {
+//     fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${response[0].lat}&lon=${response[0].lon}&appid=${dataKey}&units=imperial`,
+//     {mode: 'cors'})
+//     .then(function(response) {
+//       return response.json();
+//     })
+//     .then(function(response) {
+//       printValues(response);
+//     })
+//   })
+// }
+
+// export const printValues = async (response) => {
+//   const values = await response;
+//   console.log(`Here is the returned, out of scope values: ${values.main.city}!`);
+// }
+
+// console.log(typeof getFiveDayData)
+
+// printValues();
+
+// console.log(resp);
+
