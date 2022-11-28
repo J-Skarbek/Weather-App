@@ -1,5 +1,3 @@
-// import { getFiveDayData } from './fiveDayForecast.js';
-
 export function createForecastDisplay() {
   const mainContent = document.querySelector('.main-content');
   const element = document.createElement('div');
