@@ -16,6 +16,7 @@ export function getWeatherData() {
       return response.json();
     })
     .then(function(response) {
+      console.log(response)
       displayCurrentTemp(response);
       console.log(`The temp is currently ${Math.round(response.main.temp)}.`)
     })

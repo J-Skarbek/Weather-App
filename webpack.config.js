@@ -5,7 +5,11 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
-    print: './src/print.js',
+    home: './src/homePage.js',
+    getData: './src/getData.js',
+    key: './src/key.js',
+    fiveDayForcast: './src/fiveDayForcast.js',
+    fiveDayDisplay: './src/fiveDayDisplay.js',
   },
   devtool: 'inline-source-map',
   plugins: [

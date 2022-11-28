@@ -24,7 +24,9 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
+  height: 100vh;
+  max-height: 100vh;
 }
 ol, ul {
 	list-style: none;
@@ -40,6 +42,22 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.header,
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  height: 100px;
+  max-height: 100px;
 }
 
 .hello {
@@ -72,4 +90,9 @@ div > p {
     font-size: 2rem;
     font-weight: bold;
     margin: 5%;
+}
+
+.footer p {
+  font-size: 1.25rem;
+  margin: 0
 }
