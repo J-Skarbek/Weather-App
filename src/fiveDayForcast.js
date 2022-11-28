@@ -1,4 +1,5 @@
 import { dataKey } from './key.js';
+import { getEveryNth } from './fiveDayDisplay.js';
 
 export function getFiveDayData() {
   // Get location lat/long
@@ -24,25 +25,4 @@ export function getFiveDayData() {
       getEveryNth(newArr, 8)
     })
   })
-}
-
-function createForecastDisplay(element) {
-  const getForcastBlock = document.querySelector('.forecast');
-  const createDayBlock = document.createElement('div');
-  const createTempDisplay = document.createElement('p');
-  getForcastBlock.appendChild(createDayBlock);
-  createDayBlock.appendChild(createTempDisplay);
-  createTempDisplay.textContent = `${Math.round(element.main.temp)}`;
-  return createDayBlock;
-}
-
-function getEveryNth(newArr, nth) {
-  const results = [];
-  for (let i = 0; i < newArr.length; i += nth) {
-      results.push(newArr[i]);
-  }
-  results.forEach(element => {
-    createForecastDisplay(element);
-  });
-  return results;
 }
