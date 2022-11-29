@@ -1,5 +1,6 @@
 import { dataKey } from './key.js';
 import { displayCurrentTemp } from './displayCurrentTemp.js';
+import { displayWeatherIcon } from './displayWeatherIcon.js';
 
 export function getWeatherData() {
   fetch(`http://api.openweathermap.org/geo/1.0/direct?q=Nashville&appid=${dataKey}`,
@@ -17,7 +18,9 @@ export function getWeatherData() {
     })
     .then(function(response) {
       console.log(response)
+      console.log(response.weather[0].main)
       displayCurrentTemp(response);
+      displayWeatherIcon(response);
       console.log(`The temp is currently ${Math.round(response.main.temp)}.`)
     })
   })
