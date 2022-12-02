@@ -1,7 +1,10 @@
 export function createHomePage() {
+  const mainWrapper = document.createElement('div');
+  mainWrapper.classList.add('main-wrapper')
   const element = document.createElement('div');
   element.classList.add('main-content');
-  return element;
+  mainWrapper.appendChild(element)
+  return mainWrapper;
 }
 export function createHeader() {
   const header = document.createElement('div');

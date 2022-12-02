@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap');
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,9 +26,10 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-  line-height: 1;
+  line-height: 1.4;
   height: 100vh;
   max-height: 100vh;
+  font-family: 'Libre Franklin', sans-serif;
 }
 ol, ul {
 	list-style: none;
@@ -65,11 +68,16 @@ h1 {
     /* background: url('./images/test-image.png'); */
 }
 
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .main-content {
-    background-color: aqua;
+    /* background-color: aqua; */
     height: 100vh;
     display: grid;
-    grid-template-columns: repeat(12, minmax(50px, 1fr));
+    grid-template-columns: repeat(12, minmax(50px, 100px));
     grid-template-rows: repeat(12, minmax(50px, 1fr));
     /* display: flex;
     flex-direction: column;
@@ -92,17 +100,20 @@ h1 {
 }
 
 .forecast {
-    grid-column: 2 / span 8;
-    grid-row: 6 / span 4;
+    grid-column: 2 / span 10;
+    grid-row: 7 / span 4;
     display: flex;
     justify-content: center;
     align-items: center;
+    /* background-color: #fff; */
 }
 
 .forecast div {
-    background-color: wheat;
+    background-color: #fff;
     padding: 5%;
     margin: 2% 4%;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 div > p {
