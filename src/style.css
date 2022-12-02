@@ -71,6 +71,7 @@ h1 {
 .main-wrapper {
   display: flex;
   justify-content: center;
+  background-image: url("./images/sun.jpg");
 }
 
 .main-content {
