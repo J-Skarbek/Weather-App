@@ -4,5 +4,5 @@ export function displayWeatherIcon(response) {
   } else {
     console.log('something fucked up')
   }
-  response.weather[0].main === 'Rain' ? console.log('it rains') : console.log(`it does not rain, instead it ${response.weather[0].main}`);
+  response.weather[0].main === 'Clouds' ? console.log('it rains') : console.log(`it does not rain, instead it ${response.weather[0].main}`);
 }
