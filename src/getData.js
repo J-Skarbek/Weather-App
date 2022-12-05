@@ -1,6 +1,7 @@
 import { dataKey } from './key.js';
 import { displayCurrentTemp } from './displayCurrentTemp.js';
 import { displayWeatherIcon } from './displayWeatherIcon.js';
+// import { success, error } from './getLocation.js';
 
 export function getWeatherData() {
   fetch(`http://api.openweathermap.org/geo/1.0/direct?q=Nashville&appid=${dataKey}`,
