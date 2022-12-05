@@ -8,10 +8,17 @@ export function createHomePage() {
 }
 export function createHeader() {
   const header = document.createElement('div');
+  const pageTitle = document.createElement('h1');
+  const searchBox = document.createElement('div');
+  const searchInput = document.createElement('INPUT');
+  searchInput.setAttribute('type', 'text');
+  searchInput.setAttribute('placeholder', 'Location...');
   header.classList.add('header');
-  const pageTitle = document.createElement('h1')
+  searchBox.classList.add('location-search');
   pageTitle.innerText = 'Weather App - Odin Project'
-  header.appendChild(pageTitle);
+  // header.appendChild(pageTitle);
+  searchBox.appendChild(searchInput)
+  header.append(pageTitle, searchBox)
   return header;
 }
 

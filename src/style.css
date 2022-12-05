@@ -74,8 +74,14 @@ h1 {
 
 .header {
   background-color: var(--dark-purple);
-  align-items: flex-start;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   padding: 0 3%;
+}
+
+.location-search {
+  margin: auto 0;
 }
 
 .main-wrapper {
