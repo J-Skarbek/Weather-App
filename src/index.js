@@ -4,7 +4,7 @@ import { createHomePage, createHeader, createFooter } from './homePage.js';
 import { getWeatherData } from './getData.js';
 import { getFiveDayData } from './fiveDayForcast.js';
 import { createForecastDisplay } from './fiveDayDisplay.js';
-import { success, error, options } from './getLocation.js';
+import { getCoords } from './getLocation.js';
 // import { displayWeatherIcon } from './displayWeatherIcon.js';
 
 document.body.appendChild(createHeader());
@@ -15,5 +15,5 @@ getFiveDayData();
 createForecastDisplay();
 // displayWeatherIcon(response);
 
-navigator.geolocation.getCurrentPosition(success, error, options);
+getCoords();
 
