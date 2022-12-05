@@ -15,5 +15,5 @@ getFiveDayData();
 createForecastDisplay();
 // displayWeatherIcon(response);
 
-getCoords();
+// getCoords();
 
