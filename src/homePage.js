@@ -33,7 +33,7 @@ function createSearchBox() {
   const searchSubmit = document.createElement('button');
   searchBox.append(searchInput, searchSubmit);
   searchBox.classList.add('location-search');
-  searchSubmit.classList.add('submit-btn-img');
+  searchSubmit.classList.add('submit-btn');
   searchSubmit.setAttribute('type', 'button');
   searchInput.setAttribute('type', 'text');
   searchInput.setAttribute('placeholder', 'Location...');

@@ -4,7 +4,8 @@ import { createHomePage, createHeader, createFooter } from './homePage.js';
 import { getWeatherData } from './getData.js';
 import { getFiveDayData } from './fiveDayForcast.js';
 import { createForecastDisplay } from './fiveDayDisplay.js';
-import { getCoords } from './getLocation.js';
+// import { searchSubmissions } from './listeners.js';
+// import { getCoords } from './getLocation.js';
 // import { displayWeatherIcon } from './displayWeatherIcon.js';
 
 document.body.appendChild(createHeader());
@@ -13,6 +14,7 @@ document.body.appendChild(createFooter());
 getWeatherData();
 getFiveDayData();
 createForecastDisplay();
+// searchSubmissions();
 // displayWeatherIcon(response);
 
 // getCoords();
