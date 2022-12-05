@@ -9,17 +9,38 @@ export function createHomePage() {
 export function createHeader() {
   const header = document.createElement('div');
   const pageTitle = document.createElement('h1');
+  // const searchBox = document.createElement('div');
+  // const searchInput = document.createElement('INPUT');
+  // const searchSubmit = document.createElement('button');
+  header.classList.add('header');
+  // searchBox.classList.add('location-search');
+  // searchInput.setAttribute('type', 'text');
+  // searchInput.setAttribute('placeholder', 'Location...');
+  pageTitle.innerText = 'Weather App - Odin Project';
+  // createSearchBox();
+  // searchSubmit.setAttribute('type', 'button');
+  // searchSubmit.addEventListener('click', () => {
+  //   console.log(`submission for ${searchInput.value}.`)
+  // })
+  // searchBox.append(searchInput, searchSubmit)
+  header.append(pageTitle, createSearchBox())
+  return header;
+}
+
+function createSearchBox() {
   const searchBox = document.createElement('div');
   const searchInput = document.createElement('INPUT');
+  const searchSubmit = document.createElement('button');
+  searchBox.append(searchInput, searchSubmit);
+  searchBox.classList.add('location-search');
+  searchSubmit.classList.add('submit-btn-img');
+  searchSubmit.setAttribute('type', 'button');
   searchInput.setAttribute('type', 'text');
   searchInput.setAttribute('placeholder', 'Location...');
-  header.classList.add('header');
-  searchBox.classList.add('location-search');
-  pageTitle.innerText = 'Weather App - Odin Project'
-  // header.appendChild(pageTitle);
-  searchBox.appendChild(searchInput)
-  header.append(pageTitle, searchBox)
-  return header;
+  searchSubmit.addEventListener('click', () => {
+    console.log(`submission for ${searchInput.value}.`);
+  })
+  return searchBox;
 }
 
 export function createFooter() {
