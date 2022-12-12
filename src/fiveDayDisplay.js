@@ -17,7 +17,7 @@ function populateForecastDisplay(element) {
   getForcastBlock.appendChild(createDayBlock);
   createDayBlock.append(createTempDisplay, createDateDisplay);
   createTempDisplay.textContent = `${Math.round(element.main.temp)}`;
-  createDateDisplay.textContent = `${parseJSON(element.dt_txt)}`;
+  createDateDisplay.textContent = `${format(parseJSON(element.dt_txt), 'EEEE')}`;
   return createDayBlock;
 }
   
