@@ -7,10 +7,6 @@ export function displayCurrentTemp(response) {
   const todaysLow = document.createElement('p');
   element.classList.add('current-temp');
   element.append(tempDisplay, feelsLikeDisplay, todaysHigh, todaysLow)
-  // element.appendChild(tempDisplay);
-  // element.appendChild(feelsLikeDisplay);
-  // element.appendChild(todaysHigh);
-  // element.appendChild(todaysLow);
   mainContent.appendChild(element);
   tempDisplay.innerText = `The temp is currently ${Math.round(response.main.temp)}.`;
   feelsLikeDisplay.innerText = `Feels Like: ${Math.round(response.main.feels_like)}.`;

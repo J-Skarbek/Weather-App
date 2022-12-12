@@ -1,3 +1,6 @@
+import { parse } from 'date-fns';
+import { parseJSON, format } from 'date-fns';
+
 export function createForecastDisplay() {
   const mainContent = document.querySelector('.main-content');
   const element = document.createElement('div');
@@ -14,7 +17,7 @@ function populateForecastDisplay(element) {
   getForcastBlock.appendChild(createDayBlock);
   createDayBlock.append(createTempDisplay, createDateDisplay);
   createTempDisplay.textContent = `${Math.round(element.main.temp)}`;
-  createDateDisplay.textContent = `${element.dt_txt}`;
+  createDateDisplay.textContent = `${parseJSON(element.dt_txt)}`;
   return createDayBlock;
 }
   
