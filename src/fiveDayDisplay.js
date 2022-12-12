@@ -10,9 +10,11 @@ function populateForecastDisplay(element) {
   const getForcastBlock = document.querySelector('.forecast');
   const createDayBlock = document.createElement('div');
   const createTempDisplay = document.createElement('p');
+  const createDateDisplay = document.createElement('p');
   getForcastBlock.appendChild(createDayBlock);
-  createDayBlock.appendChild(createTempDisplay);
+  createDayBlock.append(createTempDisplay, createDateDisplay);
   createTempDisplay.textContent = `${Math.round(element.main.temp)}`;
+  createDateDisplay.textContent = `${element.dt_txt}`;
   return createDayBlock;
 }
   

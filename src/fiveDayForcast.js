@@ -17,7 +17,7 @@ export function getFiveDayData() {
     })
     .then(function(response) {
       // Hiding this console log for now, used to see the data table for quick reference when needed
-      // console.table(response.list);
+      console.table(response.list);
       const newArr = [];
       response.list.forEach(element => {
         newArr.push(element);
