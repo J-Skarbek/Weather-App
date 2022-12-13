@@ -1,5 +1,10 @@
-import { parse } from 'date-fns';
 import { parseJSON, format } from 'date-fns';
+import TestIcon from './icons/cloudy-day-1.svg';
+
+const testIcon = new Image();
+testIcon.src = TestIcon;
+testIcon.classList.add('test-icon')
+
 
 export function createForecastDisplay() {
   const mainContent = document.querySelector('.main-content');
@@ -15,7 +20,7 @@ function populateForecastDisplay(element) {
   const createTempDisplay = document.createElement('p');
   const createDateDisplay = document.createElement('p');
   getForcastBlock.appendChild(createDayBlock);
-  createDayBlock.append(createTempDisplay, createDateDisplay);
+  createDayBlock.append(createTempDisplay, createDateDisplay, testIcon);
   createTempDisplay.textContent = `${Math.round(element.main.temp)}`;
   createDateDisplay.textContent = `${format(parseJSON(element.dt_txt), 'EEEE')}`;
   return createDayBlock;
