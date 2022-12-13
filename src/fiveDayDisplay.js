@@ -1,9 +1,9 @@
 import { parseJSON, format } from 'date-fns';
 import TestIcon from './icons/cloudy-day-1.svg';
 
-const testIcon = new Image();
-testIcon.src = TestIcon;
-testIcon.classList.add('test-icon')
+// const testIcon = new Image();
+// testIcon.src = TestIcon;
+// testIcon.classList.add('test-icon')
 
 
 export function createForecastDisplay() {
@@ -19,6 +19,9 @@ function populateForecastDisplay(element) {
   const createDayBlock = document.createElement('div');
   const createTempDisplay = document.createElement('p');
   const createDateDisplay = document.createElement('p');
+  const testIcon = new Image();
+  testIcon.src = TestIcon;
+  testIcon.classList.add('test-icon');
   getForcastBlock.appendChild(createDayBlock);
   createDayBlock.append(createTempDisplay, createDateDisplay, testIcon);
   createTempDisplay.textContent = `${Math.round(element.main.temp)}`;
