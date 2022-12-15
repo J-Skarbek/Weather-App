@@ -3,7 +3,7 @@ import { getEveryNth } from './fiveDayDisplay.js';
 
 export function getFiveDayData() {
   // Get location lat/long
-  fetch(`http://api.openweathermap.org/geo/1.0/direct?q=Nashville&appid=${dataKey}`,
+  fetch(`http://api.openweathermap.org/geo/1.0/direct?q=Detroit&appid=${dataKey}`,
   {mode: 'cors'})
   .then(function(response) {
     return response.json();
