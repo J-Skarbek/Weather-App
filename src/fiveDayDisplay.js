@@ -1,5 +1,5 @@
 import { parseJSON, format } from 'date-fns';
-import TestIcon from './icons/cloudy-day-1.svg';
+import ClearIcon from './icons/day.svg';
 
 // const testIcon = new Image();
 // testIcon.src = TestIcon;
@@ -14,16 +14,32 @@ export function createForecastDisplay() {
   return element;  
 }
 
+function determineIcon(element) {
+  if (element.weather.main === 'Clear') {
+    const clearIcon = new Image();
+    clearIcon.src = ClearIcon;
+    clearIcon.classList.add('weather-icon');
+  }
+}
+
+function createWeatherIcon() {
+  const clearIcon = new Image();
+  clearIcon.src = ClearIcon;
+  clearIcon.classList.add('weather-icon');
+  return clearIcon;
+}
+
 function populateForecastDisplay(element) {
   const getForcastBlock = document.querySelector('.forecast');
   const createDayBlock = document.createElement('div');
   const createTempDisplay = document.createElement('p');
   const createDateDisplay = document.createElement('p');
-  const testIcon = new Image();
-  testIcon.src = TestIcon;
-  testIcon.classList.add('test-icon');
+  // const clearIcon = new Image();
+  // clearIcon.src = ClearIcon;
+  // clearIcon.classList.add('weather-icon');
+  // createWeatherIcon();
   getForcastBlock.appendChild(createDayBlock);
-  createDayBlock.append(createTempDisplay, createDateDisplay, testIcon);
+  createDayBlock.append(createTempDisplay, createDateDisplay, createWeatherIcon());
   createTempDisplay.textContent = `${Math.round(element.main.temp)}`;
   createDateDisplay.textContent = `${format(parseJSON(element.dt_txt), 'EEEE')}`;
   return createDayBlock;
