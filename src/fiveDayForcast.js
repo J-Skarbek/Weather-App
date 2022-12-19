@@ -17,10 +17,10 @@ export function getFiveDayData() {
     })
     .then(function(response) {
       // Hiding this console log for now, used to see the data table for quick reference when needed
-      console.table(response.list);
+      // console.table(response.list);
       const newArr = [];
       response.list.forEach(element => {
-        console.log(element.weather[0].main);
+        // console.log(element.weather[0].main);
         newArr.push(element);
       });
       getEveryNth(newArr, 8)
