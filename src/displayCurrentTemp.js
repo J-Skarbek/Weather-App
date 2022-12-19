@@ -1,3 +1,5 @@
+import { determineCurrentWeatherIcon } from './displayWeatherIcon.js';
+
 export function displayCurrentTemp(response) {
   const mainContent = document.querySelector('.main-content');
   const element = document.createElement('div');
@@ -6,7 +8,7 @@ export function displayCurrentTemp(response) {
   const todaysHigh = document.createElement('p');
   const todaysLow = document.createElement('p');
   element.classList.add('current-temp');
-  element.append(tempDisplay, feelsLikeDisplay, todaysHigh, todaysLow)
+  element.append(tempDisplay, feelsLikeDisplay, todaysHigh, todaysLow, determineCurrentWeatherIcon(response))
   mainContent.appendChild(element);
   tempDisplay.innerText = `The temp is currently ${Math.round(response.main.temp)}.`;
   feelsLikeDisplay.innerText = `Feels Like: ${Math.round(response.main.feels_like)}.`;
