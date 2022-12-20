@@ -45,7 +45,7 @@ export function getWeatherDataByName(value) {
       console.log(response)
       console.log(response.weather[0].main)
       displayCurrentTemp(response);
-      displayWeatherIcon(response);
+      // displayWeatherIcon(response);
       console.log(`The temp is currently ${Math.round(response.main.temp)}.`)
     })
   })

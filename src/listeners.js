@@ -5,8 +5,8 @@ export function addListeners() {
   const submitBtn = document.querySelector('.submit-btn');
   submitBtn.addEventListener('click', () => {
     if (newLocationInput.value != null && newLocationInput.value != undefined) {
-      let userInput = newLocationInput.value;
-      getWeatherDataByName(userInput);
+      // let userInput = newLocationInput.value;
+      getWeatherDataByName(newLocationInput.value);
     } else {
       console.log('the location input is missing.')
     }
