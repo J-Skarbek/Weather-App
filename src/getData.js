@@ -1,6 +1,5 @@
 import { dataKey } from './key.js';
 import { displayCurrentTemp } from './displayCurrentTemp.js';
-import { determineCurrentWeatherIcon } from './displayWeatherIcon.js';
 // import { success, error } from './getLocation.js';
 
 // const degreeSymbol = '\U00B0'

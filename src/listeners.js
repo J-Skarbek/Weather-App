@@ -1,13 +1,20 @@
-// import { getWeatherDataByName} from './getData.js';
+import { getWeatherDataByName } from './getData.js';
 
-// const getLocationName = document.querySelector('.location-search input');
-// const value = getLocationName.value;
-// const searchLocations = document.querySelector('.submit-btn');
-
-// const weatherByLocationName = (value) => {
-//   getWeatherDataByName(value);
-// }
-
-// export function searchSubmissions() {
-//   searchLocations.addEventListener('click', weatherByLocationName)
-// }
+export function addListeners() {
+  const newLocationInput = document.querySelector('.location-search input');
+  const submitBtn = document.querySelector('.submit-btn');
+  submitBtn.addEventListener('click', () => {
+    if (newLocationInput.value != null && newLocationInput.value != undefined) {
+      let userInput = newLocationInput.value;
+      getWeatherDataByName(userInput);
+    } else {
+      console.log('the location input is missing.')
+    }
+  });
+  submitBtn.addEventListener(keydown, e => {
+    if (e.keycode === 'enter' && newLocationInput.value != null) {
+      let userInput = newLocationInput.value;
+      getWeatherDataByName(userInput);
+    };
+  });
+}

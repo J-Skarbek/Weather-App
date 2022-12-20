@@ -21,9 +21,9 @@ export function getEveryNth(newArr, nth) {
     results.push(newArr[i]);
   }
   results.forEach(element => {
-    // console.log(element.weather[0].main)
+    console.log(element.weather[0].main)
     populateForecastDisplay(element);
-    // console.log(determineIcon(element));
+    console.log(determineIcon(element));
   });
   return results;
 }
