@@ -28,12 +28,6 @@ function createSearchBox() {
   searchSubmit.setAttribute('type', 'button');
   searchInput.setAttribute('type', 'text');
   searchInput.setAttribute('placeholder', 'Location...');
-  // searchSubmit.addEventListener('click', () => {
-  //   console.log(`submission for ${searchInput.value}.`);
-  //   let searchParameter = searchInput.value;
-  //   console.log(searchParameter);
-  //   return searchParameter;
-  // })
   return searchBox;
 }
 

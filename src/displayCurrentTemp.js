@@ -16,3 +16,12 @@ export function displayCurrentTemp(response) {
   todaysLow.innerText = `Today's Low: ${Math.round(response.main.temp_min)}.`;
   return element;  
 }
+
+export function resetCurrentTempDisplay() {
+  const getCurrentTempValues = document.querySelectorAll('.current-temp p')
+  getCurrentTempValues.forEach(currentTempValue => {
+    currentTempValue.innerText = '';
+  });
+  const resetCurrentWeatherIcon = document.querySelector('.current-temp img');
+  resetCurrentWeatherIcon.remove();
+}

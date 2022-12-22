@@ -1,5 +1,5 @@
 import { dataKey } from './key.js';
-import { displayCurrentTemp } from './displayCurrentTemp.js';
+import { displayCurrentTemp, resetCurrentTempDisplay } from './displayCurrentTemp.js';
 // import { success, error } from './getLocation.js';
 
 // const degreeSymbol = '\U00B0'
@@ -44,10 +44,10 @@ export function getWeatherDataByName(value) {
     .then(function(response) {
       console.log(response)
       console.log(response.weather[0].main)
+      resetCurrentTempDisplay();
       displayCurrentTemp(response);
       // displayWeatherIcon(response);
       console.log(`The temp is currently ${Math.round(response.main.temp)}.`)
     })
   })
 }
-
