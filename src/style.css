@@ -99,7 +99,7 @@ h1 {
 
 .current-temp {
   grid-column: 1 / span 3;
-  grid-row: 2 / span 4;
+  grid-row: 2 / span 6;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -109,6 +109,16 @@ h1 {
   background-color: var(--transluscent-white);
   border-radius: 15px;
   box-shadow: var(--box-shadow-black);
+}
+
+.current-temp img {
+  width: 150px;
+  max-width: 150px;
+}
+
+img.weather-icon {
+  width: 100px;
+  max-width: 100px;
 }
 
 .forecast {
