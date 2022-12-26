@@ -23,6 +23,10 @@ export function displayCurrentTemp(response) {
   return currentWeatherDiv;  
 }
 
+// export function displayCurrentWeatherDetials(response) {
+
+// }
+
 export function resetCurrentTempDisplay() {
   document.querySelector('.current-temp').remove();
 }
