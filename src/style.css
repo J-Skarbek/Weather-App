@@ -8,6 +8,10 @@
   --dark-purple: rgba(42, 31, 56, 1.0);
 }
 
+input, select, textarea{
+  color: var(--white);
+}
+
 ::placeholder {
   color: var(--white);
 }
