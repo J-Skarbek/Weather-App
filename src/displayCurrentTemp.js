@@ -1,15 +1,5 @@
 import { determineCurrentWeatherIcon } from './displayWeatherIcon.js';
 
-// const mainContent = document.querySelector('.main-content');
-// const currentWeatherDiv = document.createElement('div');
-// const currentLocation = document.createElement('h2');
-// const currentWeatherDescription = document.createElement('h3');
-// const currentDateTime = document.createElement('p');
-// const tempDisplay = document.createElement('p');
-// const feelsLikeDisplay = document.createElement('p');
-// const todaysHigh = document.createElement('p');
-// const todaysLow = document.createElement('p');
-
 export function displayCurrentTemp(response) {
   const mainContent = document.querySelector('.main-content');
   const currentWeatherDiv = document.createElement('div');
