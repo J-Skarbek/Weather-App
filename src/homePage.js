@@ -1,11 +1,15 @@
 // import { searchFunction } from './searchFunctionality.js';
+// import { getWeatherData } from './getData.js';
+// import { getFiveDayData } from './fiveDayForcast.js';
+// import { createForecastDisplay } from './fiveDayDisplay.js';
 
 export function createHomePage() {
   const mainWrapper = document.createElement('div');
   mainWrapper.classList.add('main-wrapper');
   const element = document.createElement('div');
   element.classList.add('main-content');
-  mainWrapper.appendChild(element)
+  mainWrapper.appendChild(element);
+  // element.append(getWeatherData, getFiveDayData, createForecastDisplay);
   return mainWrapper;
 }
 export function createHeader() {

@@ -17,7 +17,7 @@ export function createForecastDisplay() {
 
 export function getEveryNth(newArr, nth) {
   const results = [];
-  for (let i = 0; i < newArr.length; i += nth) {
+  for (let i = 4; i < newArr.length; i += nth) {
     results.push(newArr[i]);
   }
   results.forEach(element => {

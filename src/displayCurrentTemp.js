@@ -24,6 +24,5 @@ export function displayCurrentTemp(response) {
 }
 
 export function resetCurrentTempDisplay() {
-  const getCurrentWeatherDiv = document.querySelector('.current-temp');
-  getCurrentWeatherDiv.remove();
+  document.querySelector('.current-temp').remove();
 }
