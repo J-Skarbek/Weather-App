@@ -15,7 +15,7 @@ export function displayCurrentTemp(response) {
   mainContent.appendChild(element);
   currentLocation.innerText = `${response.name}`;
   currentWeatherDescription.innerText = `${response.weather[0].description}`;
-  currentDateTime.innerText = `dummy text`;
+  // currentDateTime.innerText = `dummy text`;
   tempDisplay.innerText = `The temp is currently ${Math.round(response.main.temp)}.`;
   feelsLikeDisplay.innerText = `Feels Like: ${Math.round(response.main.feels_like)}.`;
   todaysHigh.innerText = `Today's High: ${Math.round(response.main.temp_max)}.`;
@@ -24,6 +24,11 @@ export function displayCurrentTemp(response) {
 }
 
 export function resetCurrentTempDisplay() {
+  const getCurrentWeatherHeaders = document.querySelectorAll('.current-temp h2, .current-temp h3');
+  getCurrentWeatherHeaders.forEach(header => {
+    header.innerText = '';
+  });
+
   const getCurrentTempValues = document.querySelectorAll('.current-temp p');
   getCurrentTempValues.forEach(currentTempValue => {
     currentTempValue.innerText = '';
