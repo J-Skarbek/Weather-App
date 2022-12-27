@@ -2,7 +2,7 @@ import { parseJSON, format } from 'date-fns';
 import ClearIcon from './icons/day.svg';
 import CloudsIcon from './icons/cloudy.svg';
 import DrizzleIcon from './icons/rainy-4.svg';
-import RainIcon from'./icons/rainy-5.svg';
+import RainIcon from './icons/rainy-5.svg';
 import ThunderStormIcon from './icons/rainy-6.svg';
 import SnowIcon from './icons/snowy-3.svg';
 import MiscIcon from './icons/weather.svg';

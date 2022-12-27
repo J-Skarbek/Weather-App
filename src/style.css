@@ -161,7 +161,7 @@ h1 {
   flex-direction: column;
   align-items: flex-start;
   align-content: center;
-  text-align: center;
+  text-align: left;
   justify-content: space-between;
   /* background-color: var(--transluscent-white); */
   border-radius: 15px;
@@ -191,25 +191,31 @@ img.weather-icon {
 }
 
 .forecast {
-    grid-column: 2 / span 10;
-    grid-row: 9 / span 4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  grid-column: 2 / span 10;
+  grid-row: 9 / span 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .forecast div {
-    background-color: var(--transluscent-white);
-    padding: 5%;
-    margin: 2% 4%;
-    border-radius: 15px;
-    box-shadow: var(--box-shadow-black);
+  background-color: var(--transluscent-white);
+  padding: 5%;
+  margin: 2% 4%;
+  border-radius: 15px;
+  box-shadow: var(--box-shadow-black);
 }
 
 div > p {
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin: 5%;
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: 900;
+  /* margin: 5%; */
+}
+
+.current-temp-reading {
+  font-size: 3.5rem;
+  font-weight: 900;
 }
 
 .footer p {

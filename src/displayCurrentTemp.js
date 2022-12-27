@@ -11,12 +11,13 @@ export function displayCurrentTemp(response) {
   const todaysHigh = document.createElement('p');
   const todaysLow = document.createElement('p');
   currentWeatherDiv.classList.add('current-temp');
+  tempDisplay.classList.add('current-temp-reading')
   currentWeatherDiv.append(currentLocation, currentWeatherDescription, currentDateTime, tempDisplay, feelsLikeDisplay, todaysHigh, todaysLow, determineCurrentWeatherIcon(response))
   mainContent.appendChild(currentWeatherDiv);
   currentLocation.innerText = `${response.name}`;
   currentWeatherDescription.innerText = `${response.weather[0].description}`;
   // currentDateTime.innerText = `dummy text`;
-  tempDisplay.innerText = `The temp is currently ${Math.round(response.main.temp)}.`;
+  tempDisplay.innerText = `${Math.round(response.main.temp)}°F`;
   feelsLikeDisplay.innerText = `Feels Like: ${Math.round(response.main.feels_like)}.`;
   todaysHigh.innerText = `Today's High: ${Math.round(response.main.temp_max)}.`;
   todaysLow.innerText = `Today's Low: ${Math.round(response.main.temp_min)}.`;
