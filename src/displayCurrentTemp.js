@@ -3,6 +3,7 @@ import { determineCurrentWeatherIcon } from './displayWeatherIcon.js';
 export function displayCurrentTemp(response) {
   const mainContent = document.querySelector('.main-content');
   const currentWeatherDiv = document.createElement('div');
+  const extraWeatherDetails = document.createElement('div');
   const currentLocation = document.createElement('h2');
   const currentWeatherDescription = document.createElement('h3');
   const currentDateTime = document.createElement('p');
@@ -11,9 +12,11 @@ export function displayCurrentTemp(response) {
   const todaysHigh = document.createElement('p');
   const todaysLow = document.createElement('p');
   currentWeatherDiv.classList.add('current-temp');
+  extraWeatherDetails.classList.add('current-extra-details');
   tempDisplay.classList.add('current-temp-reading')
-  currentWeatherDiv.append(currentLocation, currentWeatherDescription, currentDateTime, tempDisplay, feelsLikeDisplay, todaysHigh, todaysLow, determineCurrentWeatherIcon(response))
-  mainContent.appendChild(currentWeatherDiv);
+  currentWeatherDiv.append(currentLocation, currentWeatherDescription, currentDateTime, tempDisplay, determineCurrentWeatherIcon(response));
+  extraWeatherDetails.append(feelsLikeDisplay, todaysHigh, todaysLow);
+  mainContent.append(currentWeatherDiv, extraWeatherDetails);
   currentLocation.innerText = `${response.name}`;
   currentWeatherDescription.innerText = `${response.weather[0].description}`;
   // currentDateTime.innerText = `dummy text`;
