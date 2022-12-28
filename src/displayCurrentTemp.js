@@ -19,7 +19,37 @@ export function displayCurrentTemp(response) {
 
 export function displayExtraDetails(response) {
   const mainContent = document.querySelector('.main-content');
-  const extraWeatherDetails = document.createElement('div');
+  const feelsLike = document.createElement('div');
+  const currentHumidity = document.createElement('div');
+  const chanceOfRain = document.createElement('div');
+  const windSpeed = document.createElement('div');
+  // const extraDetailsContainer = document.createElement('div');
+
+  const feelsLikeText = document.createElement('p');
+  feelsLikeText.innerText = 'Feels Like';
+  const feelsLikeNumber = document.createElement('p');
+  feelsLikeNumber.innerText = `${Math.round(response.main.feels_like)}°F`;
+  feelsLike.append(feelsLikeText, feelsLikeNumber);
+
+  const humidityText = document.createElement('p');
+  feelsLikeText.innerText = 'Current Humidity';
+  const humidityNumber = document.createElement('p');
+  humidity.innerText = `${Math.round(response.main.feels_like)}°F`;
+  currentHumidity.append(humidityText, humidityNumber);
+
+  const rainText = document.createElement('p');
+  rainText.innerText = 'Current Humidity';
+  const rainNumber = document.createElement('p');
+  rain.innerText = `${Math.round(response.main.feels_like)}°F`;
+  chanceOfRain.append(rainText, rainNumber);
+
+  const windText = document.createElement('p');
+  windText.innerText = 'Current Humidity';
+  const windNumber = document.createElement('p');
+  wind.innerText = `${Math.round(response.main.feels_like)}°F`;
+  windSpeed.append(windText, windNumber);
+
+
   const feelsLikeDisplay = document.createElement('p');
   const todaysHigh = document.createElement('p');
   const todaysLow = document.createElement('p');
