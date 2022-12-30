@@ -9,6 +9,7 @@ import { addListeners } from './listeners.js';
 document.body.appendChild(createHeader());
 document.body.appendChild(createHomePage());
 document.body.appendChild(createFooter());
+// document.querySelector('.main-content').append(getWeatherData, createForecastDisplay)
 getWeatherData();
 getFiveDayData();
 createForecastDisplay();
