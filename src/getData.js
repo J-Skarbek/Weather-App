@@ -14,8 +14,8 @@ export function getWeatherData() {
       return response.json();
     })
     .then(function(response) {
-      // console.log(response)
-      // console.log(response.weather[0].main)
+      console.log(response)
+      console.log(response.weather[0].main)
       displayCurrentTemp(response);
       displayExtraDetails(response);
     })
