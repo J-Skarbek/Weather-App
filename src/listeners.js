@@ -1,4 +1,5 @@
 import { getWeatherDataByName } from './getData.js';
+import { getFiveDayFromUserInput} from './fiveDayForcast.js';
 
 export function addListeners() {
   const newLocationInput = document.querySelector('.location-search input');
@@ -6,6 +7,7 @@ export function addListeners() {
   submitBtn.addEventListener('click', () => {
     if (newLocationInput.value != null && newLocationInput.value != undefined) {
       getWeatherDataByName(newLocationInput.value);
+      getFiveDayFromUserInput(newLocationInput.value);
     } else {
       console.log('the location input is missing.')
     }

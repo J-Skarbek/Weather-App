@@ -89,7 +89,7 @@ export function displayExtraDetails(response) {
 
   mainContent.appendChild(extraWeatherDetails);
   extraWeatherDetails.append(feelsLike, currentHumidity, dailyHigh, dailyLow, windSpeed);
-  return extraWeatherDetails;
+  // return extraWeatherDetails;
 }
 
 export function resetCurrentTempDisplay() {

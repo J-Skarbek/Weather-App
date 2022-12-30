@@ -12,20 +12,19 @@ export function createForecastDisplay() {
   const element = document.createElement('div');
   element.classList.add('forecast');
   mainContent.appendChild(element);
-  return element;  
+  // return element;  
 }
 
 export function getEveryNth(newArr, nth) {
+  // resetForecastDisplays();
   const results = [];
   for (let i = 4; i < newArr.length; i += nth) {
     results.push(newArr[i]);
   }
   results.forEach(element => {
-    console.log(element.weather[0].main)
     populateForecastDisplay(element);
-    console.log(determineIcon(element));
   });
-  return results;
+  // return results;
 }
 
 function determineIcon(element) {
@@ -79,5 +78,12 @@ function populateForecastDisplay(element) {
   createDayBlock.append(createTempDisplay, createDateDisplay, determineIcon(element));
   createTempDisplay.textContent = `${Math.round(element.main.temp)}`;
   createDateDisplay.textContent = `${format(parseJSON(element.dt_txt), 'EEEE')}`;
-  return createDayBlock;
+  // return createDayBlock;
+}
+
+export function resetForecastDisplays() {
+  let forcastBlocks = document.querySelectorAll('.day-block');
+  forcastBlocks .forEach(block => {
+    block.remove();
+  });
 }

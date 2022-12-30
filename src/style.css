@@ -244,6 +244,10 @@ div > p {
   font-weight: 900;
 }
 
+.footer {
+  padding: 3% 0;
+}
+
 .footer p {
   font-size: 1.25rem;
   color: var(--white);

@@ -14,8 +14,6 @@ export function getWeatherData() {
       return response.json();
     })
     .then(function(response) {
-      console.log(response)
-      console.log(response.weather[0].main)
       displayCurrentTemp(response);
       displayExtraDetails(response);
     })
@@ -35,12 +33,9 @@ export function getWeatherDataByName(value) {
       return response.json();
     })
     .then(function(response) {
-      console.log(response)
-      console.log(response.weather[0].main)
       resetCurrentTempDisplay();
       displayCurrentTemp(response);
       displayExtraDetails(response);
-      console.log(`The temp is currently ${Math.round(response.main.temp)}.`)
     })
   })
 }
