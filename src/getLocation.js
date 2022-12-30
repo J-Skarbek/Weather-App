@@ -24,6 +24,6 @@ export function error(err) {
 
 export function getCoords() {
   const coords = navigator.geolocation.getCurrentPosition(success, error, options);
-  // console.log(coords.userLat);
+  console.log(coords.latitude);
   return coords;
 }
