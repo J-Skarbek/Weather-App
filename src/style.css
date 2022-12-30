@@ -173,8 +173,14 @@ h1 {
 
 .current-extra-details {
   grid-column: 10 / span 3;
-  grid-row: 2 / span 4;
+  grid-row: 2 / span 5;
   justify-content: space-evenly;
+}
+
+.current-extra-details div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .current-temp h2 {
