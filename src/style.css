@@ -154,8 +154,7 @@ h1 {
     grid-template-rows: repeat(12, minmax(50px, 1fr));
 }
 
-.current-temp,
-.current-extra-details {
+.current-temp {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -174,13 +173,23 @@ h1 {
 .current-extra-details {
   grid-column: 10 / span 3;
   grid-row: 2 / span 5;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
-.current-extra-details div {
+.current-extra-details > div {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+}
+
+.current-extra-details p {
+  font-size: 1rem;
+}
+
+.extra-detail-icon {
+  width: 50px;
+  max-width: 50px;
+  height: 50px;
+  max-height: 50px;
 }
 
 .current-temp h2 {
@@ -200,11 +209,6 @@ h1 {
   max-width: 150px;
 }
 
-.current-extra-details {
-  grid-column: 10 / span 3;
-  grid-row: 2 / span 4;
-
-}
 
 img.weather-icon {
   width: 100px;
