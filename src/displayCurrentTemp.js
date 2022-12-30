@@ -19,11 +19,12 @@ export function displayCurrentTemp(response) {
 
 export function displayExtraDetails(response) {
   const mainContent = document.querySelector('.main-content');
+  const extraWeatherDetails = document.createElement('div');
+  extraWeatherDetails.classList.add('current-extra-details');
   const feelsLike = document.createElement('div');
   const currentHumidity = document.createElement('div');
   const chanceOfRain = document.createElement('div');
   const windSpeed = document.createElement('div');
-  // const extraDetailsContainer = document.createElement('div');
 
   const feelsLikeText = document.createElement('p');
   feelsLikeText.innerText = 'Feels Like';
@@ -32,33 +33,25 @@ export function displayExtraDetails(response) {
   feelsLike.append(feelsLikeText, feelsLikeNumber);
 
   const humidityText = document.createElement('p');
-  feelsLikeText.innerText = 'Current Humidity';
+  humidityText.innerText = 'Current Humidity';
   const humidityNumber = document.createElement('p');
-  humidity.innerText = `${Math.round(response.main.feels_like)}°F`;
+  humidityNumber.innerText = `${Math.round(response.main.feels_like)}°F`;
   currentHumidity.append(humidityText, humidityNumber);
 
   const rainText = document.createElement('p');
   rainText.innerText = 'Current Humidity';
   const rainNumber = document.createElement('p');
-  rain.innerText = `${Math.round(response.main.feels_like)}°F`;
+  rainNumber.innerText = `${Math.round(response.main.feels_like)}°F`;
   chanceOfRain.append(rainText, rainNumber);
 
   const windText = document.createElement('p');
   windText.innerText = 'Current Humidity';
   const windNumber = document.createElement('p');
-  wind.innerText = `${Math.round(response.main.feels_like)}°F`;
+  windNumber.innerText = `${Math.round(response.main.feels_like)}°F`;
   windSpeed.append(windText, windNumber);
 
-
-  const feelsLikeDisplay = document.createElement('p');
-  const todaysHigh = document.createElement('p');
-  const todaysLow = document.createElement('p');
-  feelsLikeDisplay.innerText = `Feels Like: ${Math.round(response.main.feels_like)}°F`;
-  todaysHigh.innerText = `Today's High: ${Math.round(response.main.temp_max)}°F`;
-  todaysLow.innerText = `Today's Low: ${Math.round(response.main.temp_min)}°F`;
-  extraWeatherDetails.classList.add('current-extra-details');
   mainContent.appendChild(extraWeatherDetails);
-  extraWeatherDetails.append(feelsLikeDisplay, todaysHigh, todaysLow);
+  extraWeatherDetails.append(feelsLike, currentHumidity, chanceOfRain, windSpeed);
   return extraWeatherDetails;
 }
 
