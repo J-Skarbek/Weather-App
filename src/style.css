@@ -212,8 +212,8 @@ h1 {
 
 
 img.weather-icon {
-  width: 100px;
-  max-width: 100px;
+  width: 75px;
+  max-width: 75px;
 }
 
 .forecast {
@@ -225,18 +225,28 @@ img.weather-icon {
 }
 
 .forecast div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: var(--transluscent-white);
   padding: 5%;
   margin: 2% 4%;
   border-radius: 15px;
   box-shadow: var(--box-shadow-black);
+  width: 150px;
+  max-width: 150px;
 }
 
 div > p {
   color: var(--white);
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 900;
-  /* margin: 5%; */
+}
+
+.forecast-details {
+  font-size: 1.3rem;
+  font-size: .75rem;
+  text-transform: capitalize;
 }
 
 .current-temp-reading {

@@ -73,11 +73,14 @@ function populateForecastDisplay(element) {
   const createDayBlock = document.createElement('div');
   const createTempDisplay = document.createElement('p');
   const createDateDisplay = document.createElement('p');
-  createDayBlock.classList.add('day-block')
+  const createWeatherTextDisplay = document.createElement('p');
+  createDayBlock.classList.add('day-block');
+  createWeatherTextDisplay.classList.add('forecast-details');
   getForcastBlock.appendChild(createDayBlock);
-  createDayBlock.append(createTempDisplay, createDateDisplay, determineIcon(element));
+  createDayBlock.append(createTempDisplay, createDateDisplay, determineIcon(element), createWeatherTextDisplay);
   createTempDisplay.textContent = `${Math.round(element.main.temp)}`;
   createDateDisplay.textContent = `${format(parseJSON(element.dt_txt), 'EEEE')}`;
+  createWeatherTextDisplay.textContent = `${element.weather[0].description}`;
   // return createDayBlock;
 }
 
