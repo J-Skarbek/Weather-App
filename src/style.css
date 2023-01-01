@@ -235,7 +235,7 @@ img.weather-icon {
 
   .current-extra-details {
     grid-column: 1 / span 12;
-    grid-row: 5 / span 4;
+    grid-row: 5 / span 2;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -299,6 +299,22 @@ div > p {
 
   .forecast-details {
     font-size: .75rem !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .forecast {
+    grid-row: 7 / span 5;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .forecast div {
+    flex-direction: row;
+    max-width: 50%;
+    height: auto;
   }
 }
 
