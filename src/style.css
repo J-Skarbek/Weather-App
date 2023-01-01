@@ -141,6 +141,19 @@ h1 {
   border-radius: 20px;
 }
 
+@media only screen and (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    height: 150px;
+    max-height: 150px;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    padding-top: 1%;
+  }
+}
+
 .main-wrapper {
   display: flex;
   justify-content: center;
@@ -208,6 +221,9 @@ img.weather-icon {
 
 .current-extra-details > div {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: right;
   align-items: center;
   margin-bottom: 10%;
 }
@@ -321,11 +337,16 @@ div > p {
 
   .forecast div {
     flex-direction: row;
-    width: 50%;
-    max-width: 50%;
+    justify-content: space-between;
+    width: 60%;
+    max-width: 60%;
     height: auto;
     padding: none;
     margin: none;
+  }
+
+  .forecast div p {
+    text-align: right;
   }
 }
 
