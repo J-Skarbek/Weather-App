@@ -209,9 +209,7 @@ img.weather-icon {
 }
 
 .extra-detail-icon {
-  width: 50px;
   max-width: 50px;
-  height: 50px;
   max-height: 50px;
   margin: 5% 10%;
 }
@@ -230,13 +228,30 @@ img.weather-icon {
 
 @media only screen and (max-width: 600px) {
   .current-temp {
-  grid-column: 1 / span 12;
-  grid-row: 1 / span 4;
+    grid-column: 1 / span 12;
+    grid-row: 1 / span 4;
+    align-items: center;
   }
 
   .current-extra-details {
     grid-column: 1 / span 12;
     grid-row: 5 / span 4;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 5%;
+  }
+
+  .current-extra-details > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10%;
+    flex-direction: column;
+  }
+
+  .current-extra-details p {
+    text-align: center;
   }
 }
 
