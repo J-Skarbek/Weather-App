@@ -145,13 +145,14 @@ h1 {
   justify-content: center;
   background: url("./images/sun.jpg") rgba(0, 0, 0, 0.15);
   background-blend-mode: multiply;
+  padding: 0 5%;
 }
 
 .main-content {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(12, minmax(50px, 100px));
-    grid-template-rows: repeat(12, minmax(50px, 1fr));
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(50px, 100px));
+  grid-template-rows: repeat(12, minmax(50px, 1fr));
 }
 
 .current-temp {
@@ -168,6 +169,28 @@ h1 {
 .current-temp {
   grid-column: 1 / span 3;
   grid-row: 2 / span 4;
+}
+
+.current-temp h2 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--white);
+}
+
+.current-temp h3 {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  color: var(--white);
+}
+
+.current-temp img {
+  width: 150px;
+  max-width: 150px;
+}
+
+img.weather-icon {
+  width: 75px;
+  max-width: 75px;
 }
 
 .current-extra-details {
@@ -193,27 +216,28 @@ h1 {
   margin: 5% 10%;
 }
 
-.current-temp h2 {
-  font-size: 3.5rem;
-  font-weight: 900;
-  color: var(--white);
+@media only screen and (max-width: 750px) {
+  .current-extra-details { 
+    grid-column: 8 / span 5;
+  }
 }
 
-.current-temp h3 {
-  text-transform: capitalize;
-  font-size: 1.5rem;
-  color: var(--white);
+@media only screen and (min-width: 750px) and (max-width: 1050px) {
+  .current-extra-details > div {
+    margin-bottom: 20%;
+  }
 }
 
-.current-temp img {
-  width: 150px;
-  max-width: 150px;
-}
+@media only screen and (max-width: 600px) {
+  .current-temp {
+  grid-column: 1 / span 12;
+  grid-row: 1 / span 4;
+  }
 
-
-img.weather-icon {
-  width: 75px;
-  max-width: 75px;
+  .current-extra-details {
+    grid-column: 1 / span 12;
+    grid-row: 5 / span 4;
+  }
 }
 
 .forecast {
@@ -235,6 +259,7 @@ img.weather-icon {
   box-shadow: var(--box-shadow-black);
   width: 10%;
   max-width: 10%;
+  height: 50%;
 }
 
 div > p {
@@ -255,6 +280,10 @@ div > p {
 
   .forecast div > p {
     font-size: 1.25rem;
+  }
+
+  .forecast-details {
+    font-size: .75rem !important;
   }
 }
 
